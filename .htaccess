@@ -1,5 +1,6 @@
 RewriteEngine On
 RewriteBase /
+ErrorDocument 404 ./error.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)/(.*) app/index.php?controller=$1&action=$2 [QSA,L]
