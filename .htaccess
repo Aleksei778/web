@@ -1,4 +1,10 @@
 RewriteEngine On
+# Укажи базовый путь относительно корня веб-сервера
+RewriteBase /web/web/app/
+
+# Пропускаем реальные файлы и директории
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/(.*) app/index.php?controller=$1&action=$2 [QSA,L]
+
+# Перенаправляем запросы вида main/index в index.php?controller=main&action=index
+RewriteRule ^([^/]+)/([^/]+)$ index.php?controller=$1&action=$2 [QSA,L]
