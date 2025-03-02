@@ -13,24 +13,17 @@ class FormValidation {
     }
 
     public function isInteger($data) {
-        if (empty($data)) {
+        echo "Data: "; var_dump($data); // Отладка
+        if (empty($data) && $data !== '0') {
             return "Значение не может быть пустым";
         }
-
-        if (!is_string($data)) {
-            return "Значение должно быть строкой";
-        }
-
         $data = trim($data);
-
         if (!preg_match("/^-?\d+$/", $data)) {
-            return "Значение должно являться строковым представлением целого числа";
+            return "Значение должно являться целым числом";
         }
-
         if (intval($data) > PHP_INT_MAX || intval($data) < PHP_INT_MIN) {
             return "Значение выходит за рамки допустимого предела";
         }
-
         return "";
     }
 
