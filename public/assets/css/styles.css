@@ -131,3 +131,11 @@ nav ul li {
     border-radius: 10px;
     margin-bottom: 20px;
 }
+
+.success-message {
+    color: white;
+    font-weight: bold;
+    background-color: green;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}

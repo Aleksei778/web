@@ -42,6 +42,44 @@ class MainController extends Controller {
         $this->view->render('pages/history.php', 'История просмотра');
     }
 
+    public function validateTest() {
+        $this->model->result_validator->setTestRule('fullName', 'isValidFio');
+        $this->model->result_validator->setTestRule('Science', 'isValidScience');
+        
+        $this->model->results_validator->setResultsRule('Ecosystem', 'checkEcosystem');
+        $this->model->results_validator->setResultsRule('AbioticFactors', 'checkAbioticFactors');
+        $this->model->results_validator->setResultsRule('Science', 'checkScience');
+
+        $message = '';
+        $errors = [];
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            foreach ($_POST as $key => $value) {
+                echo "$key: $value<br>";
+            }
+
+            if ($this->model->results_validate($_POST)) {
+                $message = 'Тест успешно пройден! Все ответы правильные!';
+            } else {
+                $fields = ['fullName', 'age', 'msg', 'mobilePhone'];
+                
+                foreach ($fields as $field) {
+                    $errors[$field] = $this->model->results_validator->showErrors($field);
+                }
+            }
+
+            $model = [
+                'errors' => $errors,
+                'form_data' => $_POST,
+                'message' => $message !== '' ? $message : ''
+            ];
+
+            $this->view->render('pages/discipline_test.php', 'Тест по дисциплине', $model);
+        } else {
+            $this->view->render('pages/discipline_test.php', 'Тест по дисциплине');
+        }
+    }
+
     public function validateContact() {
         $this->model->validator->setRule('fullName', 'isNotEmpty');
         $this->model->validator->setRule('Email', 'isEmail');
