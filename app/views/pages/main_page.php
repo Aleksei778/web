@@ -2,7 +2,7 @@
     <h2>
         Ето я
     </h2>
-    <img src="/laba8/LABA8/public/assets/imgs/myphoto.jpg" alt="ето я" class="my-photo">
+    <img src="/web/public/assets/imgs/myphoto.jpg" alt="ето я" class="my-photo">
 </section>
 
 <!-- Информация обо мне -->

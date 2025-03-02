@@ -3,14 +3,14 @@ $(document).ready(function() {
     const mainMenuItems = $mainMenu.find('li');
     console.log(mainMenuItems);
     const menuImages = {
-        '/laba8/LABA8/main/index': ['/laba8/LABA8/public/assets/imgs/icons_for_menu1/mainPage.svg', '/laba8/LABA8/public/assets/imgs/icons_for_menu2/mainPage2.svg', 'Главная страница'],
-        '/laba8/LABA8/main/actionAboutMe': ['/laba8/LABA8/public/assets/imgs/icons_for_menu1/aboutMe.svg', '/laba8/LABA8/public/assets/imgs/icons_for_menu2/aboutMe2.svg', 'Обо мне'],
-        '/laba8/LABA8/main/actionMyHobbies': ['/laba8/LABA8/public/assets/imgs/icons_for_menu1/myHobbies.svg', '/laba8/LABA8/public/assets/imgs/icons_for_menu2/myHobbies2.svg', 'Мои интересы'],
-        '/laba8/LABA8/main/actionStudy': ['/laba8/LABA8/public/assets/imgs/icons_for_menu1/study.svg', '/laba8/LABA8/public/assets/imgs/icons_for_menu2/study2.svg', 'Учеба'],
-        '/laba8/LABA8/main/actionPhotoAlbum': ['/laba8/LABA8/public/assets/imgs/icons_for_menu1/photoAlbum.svg', '/laba8/LABA8/public/assets/imgs/icons_for_menu2/photoAlbum2.svg', 'Фотоальбом'],
-        '/laba8/LABA8/main/actionContact': ['/laba8/LABA8/public/assets/imgs/icons_for_menu1/contact.svg', '/laba8/LABA8/public/assets/imgs/icons_for_menu2/contact2.svg', 'Контакты'],
-        '/laba8/LABA8/main/actionDisciplineTest': ['/laba8/LABA8/public/assets/imgs/icons_for_menu1/disciplineTest.svg', '/laba8/LABA8/public/assets/imgs/icons_for_menu2/disciplineTest2.svg', 'Тест по дисциплине'],
-        '/laba8/LABA8/main/actionHistory': ['/laba8/LABA8/public/assets/imgs/icons_for_menu1/history.svg', '/laba8/LABA8/public/assets/imgs/icons_for_menu2/history2.svg', 'История просмотра']
+        '/web/main/index': ['/web/public/assets/imgs/icons_for_menu1/mainPage.svg', '/web/public/assets/imgs/icons_for_menu2/mainPage2.svg', 'Главная страница'],
+        '/web/main/actionAboutMe': ['/web/public/assets/imgs/icons_for_menu1/aboutMe.svg', '/web/public/assets/imgs/icons_for_menu2/aboutMe2.svg', 'Обо мне'],
+        '/web/main/actionMyHobbies': ['/web/public/assets/imgs/icons_for_menu1/myHobbies.svg', '/web/public/assets/imgs/icons_for_menu2/myHobbies2.svg', 'Мои интересы'],
+        '/web/main/actionStudy': ['/web/public/assets/imgs/icons_for_menu1/study.svg', '/web/public/assets/imgs/icons_for_menu2/study2.svg', 'Учеба'],
+        '/web/main/actionPhotoAlbum': ['/web/public/assets/imgs/icons_for_menu1/photoAlbum.svg', '/web/public/assets/imgs/icons_for_menu2/photoAlbum2.svg', 'Фотоальбом'],
+        '/web/main/actionContact': ['/web/public/assets/imgs/icons_for_menu1/contact.svg', '/web/public/assets/imgs/icons_for_menu2/contact2.svg', 'Контакты'],
+        '/web/main/actionDisciplineTest': ['/web/public/assets/imgs/icons_for_menu1/disciplineTest.svg', '/web/public/assets/imgs/icons_for_menu2/disciplineTest2.svg', 'Тест по дисциплине'],
+        '/web/main/actionHistory': ['/web/public/assets/imgs/icons_for_menu1/history.svg', '/web/public/assets/imgs/icons_for_menu2/history2.svg', 'История просмотра']
     };
     
 
@@ -76,17 +76,17 @@ $(document).ready(function() {
         }
     });
 
-    const $hobbiesMenu = $('a[href="/laba8/LABA8/main/actionMyHobbies"]').parent();
+    const $hobbiesMenu = $('a[href="/web/main/actionMyHobbies"]').parent();
     const $submenu = $('<ul>', {
         class: 'submenu'
     });
 
     // Добавляем подпункты
     const subItems = [
-        { text: 'Хобби', href: '/laba8/LABA8/main/actionMyHobbies#hobby' },
-        { text: 'Фильмы', href: '/laba8/LABA8/main/actionMyHobbies#films' },
-        { text: 'Музыка', href: '/laba8/LABA8/main/actionMyHobbies#music' },
-        { text: 'Книги', href: '/laba8/LABA8/main/actionMyHobbies#books' }
+        { text: 'Хобби', href: '/web/main/actionMyHobbies#hobby' },
+        { text: 'Фильмы', href: '/web/main/actionMyHobbies#films' },
+        { text: 'Музыка', href: '/web/main/actionMyHobbies#music' },
+        { text: 'Книги', href: '/web/main/actionMyHobbies#books' }
     ];
 
     subItems.forEach(function(item) {
