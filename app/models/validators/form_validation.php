@@ -27,7 +27,7 @@ class FormValidation {
     }
 
     public function isLess($data, $value) {
-        var_dump($this->isInteger($data));
+        var_dump('FLAG:', $this->isInteger($data));
         if ($this->isInteger($data) !== "") { 
             return "Значение должно являться строковым представлением целого числа";
         }
