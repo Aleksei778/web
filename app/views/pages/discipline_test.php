@@ -50,16 +50,16 @@
                     <legend>Тест по дисциплине</legend>
                     <!-- Вопрос 1 -->
                     <label for="firstQ">Вопрос 1. В какой экосистеме обитает тушканчик?</label>
-                    <select name="ecosystem" id="ecosystem">
+                    <select name="Ecosystem" id="Ecosystem">
                         <optgroup label="Наземные экосистемы">
-                            <option value="forest" <?php echo (isset($_POST['ecosystem']) && $_POST['ecosystem'] === 'forest') ? 'selected' : ''; ?>>Леса</option>
-                            <option value="desert" <?php echo (isset($_POST['ecosystem']) && $_POST['ecosystem'] === 'desert') ? 'selected' : ''; ?>>Пустыни</option>
-                            <option value="grassland" <?php echo (isset($_POST['ecosystem']) && $_POST['ecosystem'] === 'grassland') ? 'selected' : ''; ?>>Степи</option>
+                            <option value="forest" <?php echo (isset($_POST['Ecosystem']) && $_POST['ecosystem'] === 'forest') ? 'selected' : ''; ?>>Леса</option>
+                            <option value="desert" <?php echo (isset($_POST['Ecosystem']) && $_POST['ecosystem'] === 'desert') ? 'selected' : ''; ?>>Пустыни</option>
+                            <option value="grassland" <?php echo (isset($_POST['Ecosystem']) && $_POST['ecosystem'] === 'grassland') ? 'selected' : ''; ?>>Степи</option>
                         </optgroup>
                         <optgroup label="Водные экосистемы">
-                            <option value="freshwater" <?php echo (isset($_POST['ecosystem']) && $_POST['ecosystem'] === 'freshwater') ? 'selected' : ''; ?>>Пресноводные</option>
-                            <option value="marine" <?php echo (isset($_POST['ecosystem']) && $_POST['ecosystem'] === 'marine') ? 'selected' : ''; ?>>Морские</option>
-                            <option value="wetlands" <?php echo (isset($_POST['ecosystem']) && $_POST['ecosystem'] === 'wetlands') ? 'selected' : ''; ?>>Водно-болотные угодья</option>
+                            <option value="freshwater" <?php echo (isset($_POST['Ecosystem']) && $_POST['ecosystem'] === 'freshwater') ? 'selected' : ''; ?>>Пресноводные</option>
+                            <option value="marine" <?php echo (isset($_POST['Ecosystem']) && $_POST['ecosystem'] === 'marine') ? 'selected' : ''; ?>>Морские</option>
+                            <option value="wetlands" <?php echo (isset($_POST['Ecosystem']) && $_POST['ecosystem'] === 'wetlands') ? 'selected' : ''; ?>>Водно-болотные угодья</option>
                         </optgroup>
                     </select>
                     <?php if (isset($model['errors']['Ecosystem'])): ?>
@@ -69,25 +69,25 @@
                     <br><br>
                     <!-- Вопрос 2 -->
                     <label for="secondQ">Вопрос 2. Как называется наука, изучающая взаимоотношения живых организмов между собой и с окружающей средой?</label>
-                    <input type="text" id="ecology_termin" name="ecology_termin" placeholder="Введите ответ" 
-                           value="<?php echo isset($_POST['ecology_termin']) ? htmlspecialchars($_POST['ecology_termin']) : ''; ?>">
+                    <input type="text" id="Science" name="Science" placeholder="Введите ответ" 
+                           value="<?php echo isset($_POST['Science']) ? htmlspecialchars($_POST['Science']) : ''; ?>">
                     <?php if (isset($model['errors']['Science'])): ?>
                         <?php echo $model['errors']['Science']; ?>
                     <?php endif; ?>
 
                     <!-- Вопрос 3 -->
                     <label for="thirdQ">Вопрос 3. Какие из перечисленных факторов являются абиотическими? (несколько вариантов ответа)</label><br>
-                    <input type="checkbox" name="abiotic_factors[]" id="sunlight" value="sunlight" 
-                           <?php echo (isset($_POST['abiotic_factors']) && in_array('sunlight', $_POST['abiotic_factors'])) ? 'checked' : ''; ?>>
+                    <input type="checkbox" name="AbioticFactors[]" id="sunlight" value="sunlight" 
+                           <?php echo (isset($_POST['AbioticFactors']) && in_array('sunlight', $_POST['AbioticFactors'])) ? 'checked' : ''; ?>>
                     <label id="not-label" for="sunlight">Солнечный свет</label><br>
-                    <input type="checkbox" name="abiotic_factors[]" id="temperature" value="temperature" 
-                           <?php echo (isset($_POST['abiotic_factors']) && in_array('temperature', $_POST['abiotic_factors'])) ? 'checked' : ''; ?>>
+                    <input type="checkbox" name="AbioticFactors[]" id="temperature" value="temperature" 
+                           <?php echo (isset($_POST['AbioticFactors']) && in_array('temperature', $_POST['AbioticFactors'])) ? 'checked' : ''; ?>>
                     <label id="not-label" for="temperature">Температура</label><br>
-                    <input type="checkbox" name="abiotic_factors[]" id="humidity" value="humidity" 
-                           <?php echo (isset($_POST['abiotic_factors']) && in_array('humidity', $_POST['abiotic_factors'])) ? 'checked' : ''; ?>>
+                    <input type="checkbox" name="AbioticFactors[]" id="humidity" value="humidity" 
+                           <?php echo (isset($_POST['AbioticFactors']) && in_array('humidity', $_POST['AbioticFactors'])) ? 'checked' : ''; ?>>
                     <label id="not-label" for="humidity">Влажность</label><br>
-                    <input type="checkbox" name="abiotic_factors[]" id="predators" value="predators" 
-                           <?php echo (isset($_POST['abiotic_factors']) && in_array('predators', $_POST['abiotic_factors'])) ? 'checked' : ''; ?>>
+                    <input type="checkbox" name="AbioticFactors[]" id="predators" value="predators" 
+                           <?php echo (isset($_POST['AbioticFactors']) && in_array('predators', $_POST['AbioticFactors'])) ? 'checked' : ''; ?>>
                     <label id="not-label" for="predators">Хищники</label><br><br>
                     <?php if (isset($model['errors']['AbioticFactors'])): ?>
                         <?php echo $model['errors']['AbioticFactors']; ?>

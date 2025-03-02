@@ -44,7 +44,6 @@ class MainController extends Controller {
 
     public function validateTest() {
         $this->model->results_validator->SetTestsRule('fullName', 'isValidFio');
-        $this->model->results_validator->SetTestsRule('Science', 'isValidScience');
         
         $this->model->results_validator->SetResultsRule('Ecosystem', 'CheckEcosystem');
         $this->model->results_validator->SetResultsRule('AbioticFactors', 'CheckAbioticFactors');
@@ -57,7 +56,7 @@ class MainController extends Controller {
             if ($this->model->results_validator->VerifyResults($_POST)) {
                 $message = 'Тест успешно пройден! Все ответы правильные!';
             } else {
-                $fields = ['fullName', 'age', 'msg', 'mobilePhone'];
+                $fields = ['fullName', 'Ecosystem', 'AbioticFactors', 'Science'];
                 
                 foreach ($fields as $field) {
                     $errors[$field] = $this->model->results_validator->ShowErrors($field);
