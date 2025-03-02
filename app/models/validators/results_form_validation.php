@@ -28,7 +28,7 @@ class ResultsVerification {
 
     public function CheckAbioticFactors($data) {
         if ($data !== ['Солнечный свет', 'Температура', 'Влажность']) {
-            return "Подумай ещё! Тут три правильных варианта ответа."
+            return "Подумай ещё! Тут три правильных варианта ответа.";
         }
         return "";
     }
