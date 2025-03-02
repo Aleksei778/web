@@ -34,7 +34,7 @@ class ResultsVerification extends CustomFormValidation {
     }
 
     public function VerifyResults($post_array) {
-        foreach ($this->rules as $rule) {
+        foreach ($this->result_rules as $rule) {
             $field = $rule['field'];
             $validator = $rule['validator'];
 
