@@ -76,7 +76,8 @@ class MainController extends Controller {
 
             $this->view->render('pages/discipline_test.php', 'Тест по дисциплине', $model);
         } else {
-            $this->view->render('pages/discipline_test.php', 'Тест по дсициплине');
+            $this->view->render('pages/discipline_test.php', 'Тест по дисциплине');
+        }
     }
 
     public function validateContact() {
