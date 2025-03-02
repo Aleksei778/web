@@ -91,7 +91,7 @@
                     <button type="button" id="clear_contactform-btn">Очистить форму</button>
                 </div>
                 <?php if ($model['message'] !== ''): ?>
-                    <div class="success-message"> <?php echo $model['message'] ?> </div>
+                    <div class="success-message"> <?php echo $model['message']; ?> </div>
                 <?php endif; ?>
             </form>
         </div>

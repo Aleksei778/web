@@ -74,7 +74,7 @@ class FormValidation {
         ];
     }
 
-    public function validate($post_array) {
+    public function Validate($post_array) {
         $this->errors = [];
 
         foreach ($this->rules as $rule) {

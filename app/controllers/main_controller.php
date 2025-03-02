@@ -43,12 +43,12 @@ class MainController extends Controller {
     }
 
     public function validateTest() {
-        $this->model->result_validator->setTestRule('fullName', 'isValidFio');
-        $this->model->result_validator->setTestRule('Science', 'isValidScience');
+        $this->model->results_validator->SetTestRule('fullName', 'isValidFio');
+        $this->model->results_validator->SetTestRule('Science', 'isValidScience');
         
-        $this->model->results_validator->setResultsRule('Ecosystem', 'checkEcosystem');
-        $this->model->results_validator->setResultsRule('AbioticFactors', 'checkAbioticFactors');
-        $this->model->results_validator->setResultsRule('Science', 'checkScience');
+        $this->model->results_validator->SetResultsRule('Ecosystem', 'checkEcosystem');
+        $this->model->results_validator->SetResultsRule('AbioticFactors', 'checkAbioticFactors');
+        $this->model->results_validator->SetResultsRule('Science', 'checkScience');
 
         $message = '';
         $errors = [];
@@ -58,13 +58,13 @@ class MainController extends Controller {
                 echo "$key: $value<br>";
             }
 
-            if ($this->model->results_validate($_POST)) {
+            if ($this->model->results_validator->VerifyResults($_POST)) {
                 $message = 'Тест успешно пройден! Все ответы правильные!';
             } else {
                 $fields = ['fullName', 'age', 'msg', 'mobilePhone'];
                 
                 foreach ($fields as $field) {
-                    $errors[$field] = $this->model->results_validator->showErrors($field);
+                    $errors[$field] = $this->model->results_validator->ShowErrors($field);
                 }
             }
 
@@ -81,12 +81,12 @@ class MainController extends Controller {
     }
 
     public function validateContact() {
-        $this->model->validator->setRule('fullName', 'isNotEmpty');
-        $this->model->validator->setRule('Email', 'isEmail');
-        $this->model->validator->setRule('age', 'isInteger');
-        $this->model->validator->setRule('age', 'isGreater', 18);
-        $this->model->validator->setRule('msg', 'isNotEmpty');
-        $this->model->validator->setRule('mobilePhone', 'isNotEmpty');
+        $this->model->validator->SetRule('fullName', 'isNotEmpty');
+        $this->model->validator->SetRule('Email', 'isEmail');
+        $this->model->validator->SetRule('age', 'isInteger');
+        $this->model->validator->SetRule('age', 'isGreater', 18);
+        $this->model->validator->SetRule('msg', 'isNotEmpty');
+        $this->model->validator->SetRule('mobilePhone', 'isNotEmpty');
 
         $message = '';
         $errors = [];
@@ -96,13 +96,13 @@ class MainController extends Controller {
                 echo "$key: $value<br>";
             }
 
-            if ($this->model->validate($_POST)) {
+            if ($this->model->validator->Validate($_POST)) {
                 $message = 'Форма успешно отправлена!';
             } else {
                 $fields = ['fullName', 'Email', 'age', 'msg', 'mobilePhone'];
 
                 foreach ($fields as $field) {
-                    $errors[$field] = $this->model->validator->showErrors($field);
+                    $errors[$field] = $this->model->validator->ShowErrors($field);
                 }
             }
 
