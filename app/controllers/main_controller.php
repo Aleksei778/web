@@ -43,8 +43,8 @@ class MainController extends Controller {
     }
 
     public function validateTest() {
-        $this->model->results_validator->SetTestRule('fullName', 'isValidFio');
-        $this->model->results_validator->SetTestRule('Science', 'isValidScience');
+        $this->model->results_validator->SetTestsRule('fullName', 'isValidFio');
+        $this->model->results_validator->SetTestsRule('Science', 'isValidScience');
         
         $this->model->results_validator->SetResultsRule('Ecosystem', 'CheckEcosystem');
         $this->model->results_validator->SetResultsRule('AbioticFactors', 'CheckAbioticFactors');
