@@ -5,7 +5,7 @@ require_once '/opt/lampp/htdocs/web/app/models/validators/custom_form_validation
 class ResultsVerification extends CustomFormValidation {
     private $result_rules = [];
 
-    public function SetResultRule($field_name, $validator_name) {
+    public function SetResultsRule($field_name, $validator_name) {
         $this->result_rules[] = [
             'field' => $field_name,
             'validator' => $validator_name
