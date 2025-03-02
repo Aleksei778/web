@@ -2,7 +2,7 @@
 
 require_once '/opt/lampp/htdocs/web/app/models/validators/custom_form_validation.php';
 
-class ResultsVerification {
+class ResultsVerification extends CustomFormValidation {
     private $result_rules = [];
 
     public function SetResultRule($field_name, $validator_name) {
