@@ -40,9 +40,9 @@ class ResultsVerification extends CustomFormValidation {
 
             $data = $post_array[$field] ?? '';
 
-            echo "FIELD: ", $field;<br>
-            echo "VALIDATOR: ", $validator;<br>
-            echo "DATA: ", $data;<br>
+            echo "FIELD: ", $field, " ";
+            echo "VALIDATOR: ", $validator, " ";
+            echo "DATA: ", $data, " ";
 
             switch ($validator) {
                 case 'CheckEcosystem':
