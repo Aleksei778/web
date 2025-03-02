@@ -16,7 +16,7 @@ $(document).ready(function() {
 
     // Определяем текущую страницу
     const currPage = $(window.location).attr('pathname').split('/').pop();
-    console.log(currPage);
+    console.log(`currPage: ${currPage}`);
 
     mainMenuItems.each(function() {
         const item = $(this);
