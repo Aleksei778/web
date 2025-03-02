@@ -91,10 +91,6 @@ class MainController extends Controller {
         $errors = [];
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            foreach ($_POST as $key => $value) {
-                echo "$key: $value<br>";
-            }
-
             if ($this->model->validator->Validate($_POST)) {
                 $message = 'Форма успешно отправлена!';
             } else {
