@@ -7,13 +7,16 @@
     <div class="info-container">
         <!-- Форма для теста -->
         <div class="test-form">
-            <form id="testForm" style="position: sticky; z-index: 1000;">
+            <form action="/web/main/validateTest" method="POST" id="testForm" style="position: sticky; z-index: 1000;">
                 <!-- Отдельный раздел "Информация о пользователе" -->
                 <fieldset>
                     <legend>Информация о пользователе</legend>
 
                     <label for="fullName">ФИО:</label>
                     <input type="text" name="fullName" id="fullName" placeholder="Введите ФИО">
+                    <?php if (isset($model['errors']['fullName'])): ?>
+                        <?php echo $model['errors']['fullName']; ?>
+                    <?php endif; ?>
 
                     <label for="group">Группа:</label>
                     <select name="group" id="group">
@@ -81,11 +84,18 @@
                             <option value="wetlands">Водно-болотные угодья</option>
                         </optgroup>
                     </select>
+                    <?php if (isset($model['errors']['Ecosystem'])): ?>
+                        <?php echo $model['errors']['Ecosystem']; ?>
+                    <?php endif; ?>
 
                     <br><br>
                     <!-- Вопрос 2 -->
                     <label for="secondQ">Вопрос 2. Как называется наука, изучающая взаимоотношения живых организмов между собой и с окружающей средой?</label>
                     <input type="text" id="ecology_termin" name="ecology_termin" placeholder="Введите ответ"><br>
+                    <?php if (isset($model['errors']['Science'])): ?>
+                        <?php echo $model['errors']['Science']; ?>
+                    <?php endif; ?>
+
                     <!-- Вопрос 3 -->
                     <label for="thirdQ">Вопрос 3. Какие из перечисленных факторов являются абиотическими? (несколько вариантов ответа)</label><br>
                     <input type="checkbox" name="abiotic_factors" id="sunlight" value="sunlight">
@@ -96,6 +106,10 @@
                     <label id="not-label" for="humidity">Влажность</label><br>
                     <input type="checkbox" name="abiotic_factors" id="predators" value="predators">
                     <label id="not-label" for="predators">Хищники</label><br><br>
+
+                    <?php if (isset($model['errors']['msg'])): ?>
+                        <?php echo $model['errors']['AbioticFactors']; ?>
+                    <?php endif; ?>
                 </fieldset>
 
                 <!-- Кнопки "Отправить" и "Очистить форму" -->
@@ -103,6 +117,9 @@
                     <button type="submit" onclick="validateForm(event)">Отправить</button>
                     <button type="button" id="clear_testform-btn">Очистить форму</button>
                 </div>
+                <?php if ($model['message'] !== ''): ?>
+                    <div class="success-message"><?php echo $model['message']; ?></div>
+                <?php endif; ?>
             </form>
         </div>
     </div>

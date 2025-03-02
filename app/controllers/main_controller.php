@@ -46,9 +46,9 @@ class MainController extends Controller {
         $this->model->results_validator->SetTestRule('fullName', 'isValidFio');
         $this->model->results_validator->SetTestRule('Science', 'isValidScience');
         
-        $this->model->results_validator->SetResultsRule('Ecosystem', 'checkEcosystem');
-        $this->model->results_validator->SetResultsRule('AbioticFactors', 'checkAbioticFactors');
-        $this->model->results_validator->SetResultsRule('Science', 'checkScience');
+        $this->model->results_validator->SetResultsRule('Ecosystem', 'CheckEcosystem');
+        $this->model->results_validator->SetResultsRule('AbioticFactors', 'CheckAbioticFactors');
+        $this->model->results_validator->SetResultsRule('Science', 'CheckScience');
 
         $message = '';
         $errors = [];
@@ -76,8 +76,7 @@ class MainController extends Controller {
 
             $this->view->render('pages/discipline_test.php', 'Тест по дисциплине', $model);
         } else {
-            $this->view->render('pages/discipline_test.php', 'Тест по дисциплине');
-        }
+            $this->view->render('pages/discipline_test.php', 'Тест по дсициплине');
     }
 
     public function validateContact() {
