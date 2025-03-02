@@ -52,14 +52,14 @@
                     <label for="firstQ">Вопрос 1. В какой экосистеме обитает тушканчик?</label>
                     <select name="Ecosystem" id="Ecosystem">
                         <optgroup label="Наземные экосистемы">
-                            <option value="forest" <?php echo (isset($_POST['Ecosystem']) && $_POST['ecosystem'] === 'forest') ? 'selected' : ''; ?>>Леса</option>
-                            <option value="desert" <?php echo (isset($_POST['Ecosystem']) && $_POST['ecosystem'] === 'desert') ? 'selected' : ''; ?>>Пустыни</option>
-                            <option value="grassland" <?php echo (isset($_POST['Ecosystem']) && $_POST['ecosystem'] === 'grassland') ? 'selected' : ''; ?>>Степи</option>
+                            <option value="forest" <?php echo (isset($_POST['Ecosystem']) && $_POST['Ecosystem'] === 'forest') ? 'selected' : ''; ?>>Леса</option>
+                            <option value="desert" <?php echo (isset($_POST['Ecosystem']) && $_POST['Ecosystem'] === 'desert') ? 'selected' : ''; ?>>Пустыни</option>
+                            <option value="grassland" <?php echo (isset($_POST['Ecosystem']) && $_POST['Ecosystem'] === 'grassland') ? 'selected' : ''; ?>>Степи</option>
                         </optgroup>
                         <optgroup label="Водные экосистемы">
-                            <option value="freshwater" <?php echo (isset($_POST['Ecosystem']) && $_POST['ecosystem'] === 'freshwater') ? 'selected' : ''; ?>>Пресноводные</option>
-                            <option value="marine" <?php echo (isset($_POST['Ecosystem']) && $_POST['ecosystem'] === 'marine') ? 'selected' : ''; ?>>Морские</option>
-                            <option value="wetlands" <?php echo (isset($_POST['Ecosystem']) && $_POST['ecosystem'] === 'wetlands') ? 'selected' : ''; ?>>Водно-болотные угодья</option>
+                            <option value="freshwater" <?php echo (isset($_POST['Ecosystem']) && $_POST['Ecosystem'] === 'freshwater') ? 'selected' : ''; ?>>Пресноводные</option>
+                            <option value="marine" <?php echo (isset($_POST['Ecosystem']) && $_POST['Ecosystem'] === 'marine') ? 'selected' : ''; ?>>Морские</option>
+                            <option value="wetlands" <?php echo (isset($_POST['Ecosystem']) && $_POST['Ecosystem'] === 'wetlands') ? 'selected' : ''; ?>>Водно-болотные угодья</option>
                         </optgroup>
                     </select>
                     <?php if (isset($model['errors']['Ecosystem'])): ?>
