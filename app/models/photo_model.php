@@ -1,7 +1,7 @@
 <?php
 
 class Photo {
-    public static $IMG_PATH = "/laba8/LABA8/public/assets/imgs/album/compressed/";
+    public static $IMG_PATH = "/web/public/assets/imgs/album/compressed/";
     public static $photos = [
         [
             'filename' => 'surikat.jpg',
