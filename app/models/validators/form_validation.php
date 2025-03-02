@@ -13,10 +13,10 @@ class FormValidation {
     }
 
     public function isInteger($data) {
-        if (!empty(trim($data))) {
+        if (empty(trim($data))) {
             return "Значение не может быть пустым";
         }
-        
+
         if (!preg_match("/^-?\d+$/", $data)) {
             return "Значение должно являться целым числом";
         }
@@ -35,6 +35,9 @@ class FormValidation {
     }
 
     public function isGreater($data, $value) {
+        echo $data;
+        echo $this->isInteger($data);
+
         if (!$this->isInteger($data)) {
             return "Значение должно являться строковым представлением целого числа";
         }
