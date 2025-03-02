@@ -1,6 +1,6 @@
 import { clearCurrSession } from '../scripts_jQuery/history_jQuery.js';
-import { clearForm } from '../scripts_jQuery/contacts_jQuery.js';
-import { clearForm2, validateForm } from '../scripts_jQuery/disciplineTest_jQuery.js';
+// import { clearForm } from '../scripts_jQuery/contacts_jQuery.js';
+// import { clearForm2, validateForm } from '../scripts_jQuery/disciplineTest_jQuery.js';
 
 function createSureWindow(callback, message) {
     const overlay = $('<div>', {

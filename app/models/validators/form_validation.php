@@ -30,7 +30,7 @@ class FormValidation {
     }
 
     public function isLess($data, $value) {
-        if (!$this->isInteger($data)) { 
+        if ($this->isInteger($data) !== "") { 
             return "Значение должно являться строковым представлением целого числа";
         }
 
@@ -38,9 +38,6 @@ class FormValidation {
     }
 
     public function isGreater($data, $value) {
-        echo $data;
-        echo "isInt: ", var_dump($this->isInteger($data));
-
         if ($this->isInteger($data) !== "") {
             return "Значение должно являться строковым представлением целого числа";
         }
