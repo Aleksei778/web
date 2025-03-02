@@ -4,7 +4,7 @@
     </h2>
     <div class="info-container">
         <div class="contact-form">
-            <form action="/laba8/LABA8/main/validateContact" method="POST" id="contactForm" style="position: sticky; z-index: 1000;">
+            <form action="/web/main/validateContact" method="POST" id="contactForm" style="position: sticky; z-index: 1000;">
                 <!-- ФИО -->
                 <label for="fullName">ФИО:</label>
                 <input type="text" name="fullName" id="fullName" placeholder="Введите ФИО" class="contact_form-input" data-format="Пархоменко Алексей Александрович">
