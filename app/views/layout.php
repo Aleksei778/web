@@ -5,33 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> <?php echo $title ?> </title>
 
-    <link rel="shortcut icon" href="/laba8/LABA8/public/assets/imgs/icons_for_menu2/aboutMe2.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="/laba8/LABA8/public/assets/css/styles.css">
-    <link rel="stylesheet" href="/laba8/LABA8/public/assets/css/about_me.css">
-    <link rel="stylesheet" href="/laba8/LABA8/public/assets/css/main_page.css">
+    <link rel="shortcut icon" href="/web/public/assets/imgs/icons_for_menu2/aboutMe2.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="/web/public/assets/css/styles.css">
+    <link rel="stylesheet" href="/web/public/assets/css/about_me.css">
+    <link rel="stylesheet" href="/web/public/assets/css/main_page.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="/laba8/LABA8/public/assets/scripts_jQuery/date_to_menu_jQuery.js"></script>
-    <script src="/laba8/LABA8/public/assets/scripts_jQuery/history_jQuery.js"></script>
-    <script src="/laba8/LABA8/public/assets/scripts_jQuery/menu_jQuery.js"></script>
+    <script src="/web/public/assets/scripts_jQuery/date_to_menu_jQuery.js"></script>
+    <script src="/web/public/assets/scripts_jQuery/history_jQuery.js"></script>
+    <script src="/web/public/assets/scripts_jQuery/menu_jQuery.js"></script>
 
-    <link rel="stylesheet" href="/laba8/LABA8/public/assets/css/contact.css">
-    <!-- <script src="/laba8/LABA8/public/assets/scripts_jQuery/popover_jQuery.js"></script> -->
-    <script type="module" src="/laba8/LABA8/public/assets/scripts_jQuery/sureWindow_jQuery.js"></script>
-    <script src="/laba8/LABA8/public/assets/scripts_jQuery/calendar_jQuery.js"></script>
-    <!-- <script src="/laba8/LABA8/public/assets/scripts_jQuery/contacts_jQuery.js"></script> -->
+    <link rel="stylesheet" href="/web/public/assets/css/contact.css">
+    <!-- <script src="/web/public/assets/scripts_jQuery/popover_jQuery.js"></script> -->
+    <script type="module" src="/web/public/assets/scripts_jQuery/sureWindow_jQuery.js"></script>
+    <script src="/web/public/assets/scripts_jQuery/calendar_jQuery.js"></script>
+    <!-- <script src="/web/public/assets/scripts_jQuery/contacts_jQuery.js"></script> -->
 
-    <link rel="stylesheet" href="/laba8/LABA8/public/assets/css/discipline_test.css">
-    <!-- <script src="/laba8/LABA8/public/assets/scripts_jQuery/disciplineTest_jQuery.js"></script> -->
+    <link rel="stylesheet" href="/web/public/assets/css/discipline_test.css">
+    <!-- <script src="/web/public/assets/scripts_jQuery/disciplineTest_jQuery.js"></script> -->
 
-    <link rel="stylesheet" href="/laba8/LABA8/public/assets/css/history.css">
+    <link rel="stylesheet" href="/web/public/assets/css/history.css">
 
-    <link rel="stylesheet" href="/laba8/LABA8/public/assets/css/my_hobbies.css">
+    <link rel="stylesheet" href="/web/public/assets/css/my_hobbies.css">
     
 
-    <link rel="stylesheet" href="/laba8/LABA8/public/assets/css/photo_album.css">
+    <link rel="stylesheet" href="/web/public/assets/css/photo_album.css">
     
 
-    <link rel="stylesheet" href="/laba8/LABA8/public/assets/css/study.css">
+    <link rel="stylesheet" href="/web/public/assets/css/study.css">
 
 </head>
 <body>
@@ -40,14 +40,14 @@
         <nav>
             <div class="container">
                 <ul id="main_menu">
-                    <li><a href="/laba8/LABA8/main/index"></a></li>
-                    <li><a href="/laba8/LABA8/main/actionAboutMe"></a></li>
-                    <li><a href="/laba8/LABA8/main/actionMyHobbies"></a></li>
-                    <li><a href="/laba8/LABA8/main/actionStudy"></a></li>
-                    <li><a href="/laba8/LABA8/main/actionPhotoAlbum"></a></li>
-                    <li><a href="/laba8/LABA8/main/actionContact"></a></li>
-                    <li><a href="/laba8/LABA8/main/actionDisciplineTest"></a></li>
-                    <li><a href="/laba8/LABA8/main/actionHistory"></a></li>
+                    <li><a href="/web/main/index"></a></li>
+                    <li><a href="/web/main/actionAboutMe"></a></li>
+                    <li><a href="/web/main/actionMyHobbies"></a></li>
+                    <li><a href="/web/main/actionStudy"></a></li>
+                    <li><a href="/web/main/actionPhotoAlbum"></a></li>
+                    <li><a href="/web/main/actionContact"></a></li>
+                    <li><a href="/web/main/actionDisciplineTest"></a></li>
+                    <li><a href="/web/main/actionHistory"></a></li>
                 </ul>
             </div>
         </nav>
