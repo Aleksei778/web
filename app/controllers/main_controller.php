@@ -83,7 +83,6 @@ class MainController extends Controller {
     public function validateContact() {
         $this->model->validator->SetRule('fullName', 'isNotEmpty');
         $this->model->validator->SetRule('Email', 'isEmail');
-        $this->model->validator->SetRule('age', 'isInteger');
         $this->model->validator->SetRule('age', 'isGreater', 18);
         $this->model->validator->SetRule('msg', 'isNotEmpty');
         $this->model->validator->SetRule('mobilePhone', 'isNotEmpty');
