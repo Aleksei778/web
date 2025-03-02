@@ -1,6 +1,7 @@
 <?php
 
 require_once 'models/validators/form_validation.php';
+require_once 'models/validators/results_form_validation.php';
 
 class Model {
     public $validator;
