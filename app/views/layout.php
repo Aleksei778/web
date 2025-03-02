@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="/web/public/assets/css/contact.css">
     <!-- <script src="/web/public/assets/scripts_jQuery/popover_jQuery.js"></script> -->
-    <script type="module" src="/web/public/assets/scripts_jQuery/sureWindow_jQuery.js"></script>
+    <!-- <script type="module" src="/web/public/assets/scripts_jQuery/sureWindow_jQuery.js"></script> -->
     <script src="/web/public/assets/scripts_jQuery/calendar_jQuery.js"></script>
     <!-- <script src="/web/public/assets/scripts_jQuery/contacts_jQuery.js"></script> -->
 
