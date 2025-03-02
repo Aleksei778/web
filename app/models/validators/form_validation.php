@@ -13,8 +13,7 @@ class FormValidation {
     }
 
     public function isInteger($data) {
-        echo "Data: "; var_dump($data); // Отладка
-        if (empty($data) && $data !== '0') {
+        if (empty($data)) {
             return "Значение не может быть пустым";
         }
         $data = trim($data);
@@ -28,7 +27,8 @@ class FormValidation {
     }
 
     public function isLess($data, $value) {
-        if (!$this->isInteger($data)) {
+        var_dump($this->isInteger($data));
+        if ($this->isInteger($data) !== "") { 
             return "Значение должно являться строковым представлением целого числа";
         }
 
