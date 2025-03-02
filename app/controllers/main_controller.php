@@ -54,10 +54,6 @@ class MainController extends Controller {
         $errors = [];
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            foreach ($_POST as $key => $value) {
-                echo "$key: $value<br>";
-            }
-
             if ($this->model->results_validator->VerifyResults($_POST)) {
                 $message = 'Тест успешно пройден! Все ответы правильные!';
             } else {
